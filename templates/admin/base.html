@@ -1,0 +1,46 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}Учёт деятельности ФК{% endblock %}
+{% block reports %}
+    <div class="left-nav">
+        <ul>
+            <li>
+                <a  target="_blank" href="/report1">
+                    <i class="icon-chevron-right">
+                    </i>
+                    Отчёт по клубам
+                </a>
+            </li>
+              <li>
+                <a target="_blank" href="/report2">
+                    <i class="icon-chevron-right">
+                    </i>
+                    Статистика о нападающих
+                </a>
+            </li>
+              <li>
+                <a target="_blank" href="/report3">
+                    <i class="icon-chevron-right">
+                    </i>
+                    Топ 5
+                </a>
+            </li>
+             <li>
+                <a target="_blank" href="/diagram">
+                    <i class="icon-chevron-right">
+                    </i>
+                    Круговая диаграмма
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="/histogram">
+                    <i class="icon-chevron-right">
+                    </i>
+                    Гистрограмма
+                </a>
+            </li>
+        </ul>
+    </div>
+
+{% endblock %}

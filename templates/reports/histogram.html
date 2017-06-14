@@ -1,0 +1,30 @@
+<html>
+<head>
+    <script type="text/javascript" src="../../static/js/chart.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages': ['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = google.visualization.arrayToDataTable(
+                {{ data|safe }}
+          );
+
+            var options = {
+                title: 'Количество сыгранных игр после 2012 года для каждой команды',
+                vAxis:{
+                    ticks:[0,1,2,3,4,5,6,7,8,9,10]
+                }
+            };
+
+            var chart = new google.visualization.ColumnChart(document.getElementById('columnchart'));
+
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<center><div id="columnchart" style="width: 1000px; height: 600px;"></div></center>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'admin/change_list.html' %}
+{% load humanize results %}
+{% block content_title %}
+    <h1> Запрос </h1>
+{% endblock %}
+{% block result_list %}
+    {% if cl %}
+        <p class="paginator">
+            {{ data|length }}
+            {% if  data|length == 1 %}{{ cl.opts.verbose_name }}{% else %}{{ cl.opts.verbose_name_plural }}{% endif %}
+        </p>
+        {% result_list_new_list cl data headers%}
+    {% endif %}
+{% endblock %}
+{% block pagination %}  {% endblock %}
